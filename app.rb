@@ -18,7 +18,11 @@ get '/random-cat' do
   erb :index
 end
 
-get '/named-cat' do
+get '/name-form' do
+  erb :name_form
+end
+
+post '/named-cat' do
   puts(params)
   @name = params[:name]
   erb :index
@@ -27,3 +31,5 @@ end
 get '/visitor' do
   erb "Hi there, Visitor <%= 2 + 2%>"
 end
+
+
